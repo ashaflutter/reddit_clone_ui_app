@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "803456348703",
+    "project_id": "shoppingpage-62958",
+    "storage_bucket": "shoppingpage-62958.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:803456348703:android:f9072b46e6c73ff9f11b2a",
+        "android_client_info": {
+          "package_name": "com.example.jewelleryshoppingpage"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_g03-F9rZVKQ8uhNA9Xv3nfe3PSBO9D4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
