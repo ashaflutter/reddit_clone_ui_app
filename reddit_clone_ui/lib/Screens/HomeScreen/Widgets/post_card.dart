@@ -63,7 +63,7 @@ final Post post;
                     ),
                     IconButton(onPressed: ()  {},
                         iconSize: 20,
-                        visualDensity: VisualDensity.compact,
+                        visuaālDensity: VisualDensity.compact,
                         icon: const Icon(Icons.more_vert,color: Colors.grey,
                         ),
                     ),
