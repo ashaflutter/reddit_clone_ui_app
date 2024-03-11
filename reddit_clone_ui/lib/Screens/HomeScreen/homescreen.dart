@@ -5,9 +5,8 @@ import 'package:reddit_clone_ui/Screens/create_post_screen/create_post_screen.da
 import 'package:reddit_clone_ui/Screens/HomeScreen/Widgets/nav_drawer.dart';
 import 'package:reddit_clone_ui/Screens/HomeScreen/Widgets/home_app_bar.dart';
 import 'package:reddit_clone_ui/Screens/HomeScreen/Widgets/profile_drawer.dart';
-import 'package:reddit_clone_ui/Screens/inbox_screen/inbox_screen.dart';
+
 import 'package:reddit_clone_ui/Screens/inbox_screen/widgets/inbox_screen_app.dart';
-import 'package:reddit_clone_ui/Screens/HomeScreen/Widgets/home_app_bar.dart';
 
 import '../chat_screen/chat_screen.dart';
 

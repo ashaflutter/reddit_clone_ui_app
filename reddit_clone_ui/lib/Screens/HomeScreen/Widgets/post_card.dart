@@ -10,7 +10,7 @@ final Post post;
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.of(context).pushNamed(PostDetails arguments: post);
+        Navigator.of(context).pushNamed(PostDetails.routeName, arguments: post);
       },
       child: Container(
         margin: const EdgeInsets.only(bottom: 8.0),
@@ -63,7 +63,7 @@ final Post post;
                     ),
                     IconButton(onPressed: ()  {},
                         iconSize: 20,
-                        visuaālDensity: VisualDensity.compact,
+                        visualDensity: VisualDensity.compact,
                         icon: const Icon(Icons.more_vert,color: Colors.grey,
                         ),
                     ),
@@ -77,8 +77,7 @@ final Post post;
                 fontWeight: FontWeight.bold,
                 fontSize: 18,
               ),),),
-              post.image! =  ? Image.asset(post.image!,fit: BoxFit.cover,)
-                  :const SizedBox.shrink(),
+
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.center,

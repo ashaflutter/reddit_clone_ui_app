@@ -1,5 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:badges/badges.dart';
+import 'package:reddit_clone_ui/Screens/inbox_screen/widgets/message_tab_container.dart';
+import 'package:reddit_clone_ui/Screens/inbox_screen/widgets/notification_tab_container.dart';
+
+
+
+
 class InboxScreen extends StatefulWidget {
   const InboxScreen({super.key});
 
@@ -7,7 +13,23 @@ class InboxScreen extends StatefulWidget {
   State<InboxScreen> createState() => _InboxScreenState();
 }
 
-class _InboxScreenState extends State<InboxScreen> {
+class _InboxScreenState extends State<InboxScreen>
+
+with TickerProviderStateMixin {
+  late final TabController _controller;
+  @override
+
+  void initState() {
+    _controller = TabController(length: 2, vsync: this);
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return NestedScrollView(headerSliverBuilder: (context, value) {
@@ -28,27 +50,32 @@ class _InboxScreenState extends State<InboxScreen> {
             child: SizedBox(
               width: 250,
               child: TabBar(
-                 // controller: _controller,
+                  controller: _controller,
                   indicatorColor: Theme.of(context).colorScheme.secondary,
                   labelColor: Colors.black,
                   unselectedLabelColor: Colors.grey,
-
                   tabs: [
                     const Tab(text:  "Notifications"),
-                   // Badge(
-                      //badgeContent: const Text(
-                       // "2",
-                      //  style: TextStyle(
+                    Badge(
+                      badgeContent: const Text(
+                        "2",
+                        style: TextStyle(
 
-                      //  ) ,
-                     // )
-                   // )
+      ) ,),
+                   badgeColor:Colors.red.shade600,
+                   position: BadgePosition.topEnd(end: -40, top: 1),
+                   child:const Tab(text: "Message"),
+                    )
                   ]),
-            )
+            ),
           ),
-        ),
+        )
       ];
 
-    }  );
+    }  ,
+    body: TabBarView(
+        controller: _controller,
+        children: const [NotificationTabContainer(), MessageTabContainer()]),
+    );
   }
 }

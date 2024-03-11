@@ -14,6 +14,12 @@ class Comment {
     this.thread =const[],
 });
   static List<Comment> comments =[
-    Comment(userName: "", timePosted: "", description: description, upvotes: upvotes)
+    Comment(userName: "delhite_in _kerala",
+        timePosted: 8,
+        description: "Looking like",
+        upvotes: 56),
+
+    Comment(userName:"Histrorical_Echo" , timePosted: 6, description: "wow", upvotes:43),
   ];
+
 }

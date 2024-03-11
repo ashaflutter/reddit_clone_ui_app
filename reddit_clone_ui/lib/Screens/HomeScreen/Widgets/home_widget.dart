@@ -8,6 +8,7 @@ import 'package:reddit_clone_ui/Screens/HomeScreen/Widgets/trending_container.da
 
 
 
+
 class HomeWiget extends StatefulWidget {
   const HomeWiget({super.key});
 
@@ -96,7 +97,7 @@ class PopularTabView extends StatelessWidget {
         itemCount: Post.posts.length,
         itemBuilder:(context, index) {
 final post =Post.posts[index];
-return PostCard(post:post);
+
 }),
     ],
     );
@@ -119,7 +120,7 @@ physics: const NeverScrollableScrollPhysics(),
 itemCount: Post.posts.length,
 itemBuilder: (context, index) {
   final post =  Post.posts[index];
-  return PostCard(post:post);
+
 }),
     ],
     );
